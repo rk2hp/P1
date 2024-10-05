@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="section1.css">
     <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Forum&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+
     <title>P1</title>
     <style>
         * {
@@ -16,12 +22,13 @@
             box-sizing: border-box;
         }
         :root{
-            --primary-color: white;
+            
+            --primary-color: rgb(255, 255, 255);
             --secondary-color: #212121;
         }
         .dark-theme{
             --primary-color: black;
-            --secondary-color: white;
+            --secondary-color: rgb(255, 255, 255);
         }
         .color{
             color: var(--secondary-color);
@@ -36,6 +43,11 @@
             height: 100%;
             margin-inline:10px ;
         }
+        .font{
+            font-family:"Forum";
+            font-size: large;
+            
+        }
         #navbar{
             height: 72px;
             position: sticky;
@@ -45,7 +57,7 @@
            
         }
         #navbox{
-            margin-inline: 10%;
+            margin-inline: 0%;
             width:100% ;
             justify-content: space-between;
 
@@ -61,12 +73,12 @@
         }
         #login{
             border: 1px solid blue;
+            background-color: var(--primary-color);
         }
-     #login a{
-            color: blue;
-        }
-                                          #login:hover{
-            background-color: aliceblue;   
+    
+       
+         #login:hover{
+            background-color: var(--primary-color);   
         }
         #register {
             border: 1px solid rgb(243, 119, 57);
@@ -84,7 +96,52 @@
             width: 50px;
             cursor: pointer;
         }
-       
+
+       /* search bar CSS */
+       .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+            background-color: #e9ecef;
+        }
+        .search-bar {
+            width: 60%;
+            max-width: 600px;
+            display: flex;
+            overflow: hidden;
+            border-radius: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+        .search-icon {
+            display: flex;
+            align-items: center;
+            padding: 0 1rem;
+            color: #6c757d;
+        }
+        .search-input {
+            flex-grow: 1;
+            padding: 1rem 1rem 1rem 0;
+            font-size: 1.2rem;
+            border: none;
+            outline: none;
+        }
+        .search-button {
+            padding: 1rem 2rem;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border-radius: 50px;
+            margin-right: 5px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+        }
+        .search-button:hover {
+            background-color: #0056b3;        }
         
     </style>
 </head>
@@ -94,20 +151,20 @@
         <div id="navbox" class="border flex">
             <div id="leftnav" class="border flex">
                 <div id="logobox" class="border flex">
-                    <p class="border flex color"><a href="index.html">logo</a></p>
+                    <p class="border flex color"><a href="index.html" class="color">LOGO</a></p>
                 </div>
                 <ul class="border flex">
-                    <li class="border flex color"><a href="about.html">Job</a></li>
-                    <li class="border flex color"><a href="">services</a></li>
-                    <li class="border flex color"><a href="">about</a></li>
+                    <li class="border flex "><a href="job.html" class="color font">Job</a></li>
+                    <li class="border flex color"><a href="" class="font color">Services</a></li>
+                    <li class="border flex color"><a href="" class="font color">About</a></li>
                 </ul>
             </div>
             <div id="rightnav" class="border flex">
                 <ul class=" border flex">
-                    <li class="border flex btn_box " id="login"><a href="">Login</a></li>
-                    <li class="border flex btn_box " id="register"><a href="">Register</a></li>
+                    <li class="border flex btn_box " id="login"><a href="" class="font color">Login</a></li>
+                    <li class="border flex btn_box " id="register"><a href="" class="font color">Register</a></li>
                     <hr style="height: 40%;">
-                    <li class="border flex"><a href="" class="color">For employes</a></li>
+                    <li class="border flex"><a href="" class="color font" >For Employes</a></li>
                     <div id="DayNightMode">
                         <img src="moon.png" alt="" id="icon">
                     </div>
@@ -119,6 +176,15 @@
     </div>
     
     <section id="sec1"> 
+        <main class="search-container">
+            <div class="search-bar">
+                <div class="search-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <input type="text" class="search-input" placeholder="Search for jobs...">
+                <button class="search-button">Search</button>
+            </div>
+        </main>
 
     </section>
     <hr>
