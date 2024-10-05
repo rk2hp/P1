@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="section1.css">
+    <link rel="stylesheet" href="responsive.css">
+    <title>P1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        :root{
+            --primary-color: white;
+            --secondary-color: #212121;
+        }
+        .dark-theme{
+            --primary-color: black;
+            --secondary-color: white;
+        }
+        .color{
+            color: var(--secondary-color);
+        }
+        /* .border {
+            border: 1px solid black;
+        } */
+        .flex{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            margin-inline:10px ;
+        }
+        #navbar{
+            height: 72px;
+            position: sticky;
+            top: 0;
+            background-color: var(--primary-color);
+            margin-inline: 0px;
+           
+        }
+        #navbox{
+            margin-inline: 10%;
+            width:100% ;
+            justify-content: space-between;
+
+        }
+        #logobox{
+            width: 150px;
+        }
+        .btn_box{
+            border: 1.5px solid black;
+            border-radius: 50px;
+            height: 50%;
+            padding-inline:15px ;
+        }
+        #login{
+            border: 1px solid blue;
+        }
+     #login a{
+            color: blue;
+        }
+                                          #login:hover{
+            background-color: aliceblue;   
+        }
+        #register {
+            border: 1px solid rgb(243, 119, 57);
+            background-color: rgb(243, 119, 57);
+        }
+        #register a{
+            color: white;
+        }
+        #register:hover{
+            background-color: rgb(245, 143, 92) ;
+            
+        }
+        #icon{
+            height: 50px;
+            width: 50px;
+            cursor: pointer;
+        }
+       
+        
+    </style>
+</head>
+
+<body>
+    <div id="navbar" class="border flex">
+        <div id="navbox" class="border flex">
+            <div id="leftnav" class="border flex">
+                <div id="logobox" class="border flex">
+                    <p class="border flex color"><a href="index.html">logo</a></p>
+                </div>
+                <ul class="border flex">
+                    <li class="border flex color"><a href="about.html">Job</a></li>
+                    <li class="border flex color"><a href="">services</a></li>
+                    <li class="border flex color"><a href="">about</a></li>
+                </ul>
+            </div>
+            <div id="rightnav" class="border flex">
+                <ul class=" border flex">
+                    <li class="border flex btn_box " id="login"><a href="">Login</a></li>
+                    <li class="border flex btn_box " id="register"><a href="">Register</a></li>
+                    <hr style="height: 40%;">
+                    <li class="border flex"><a href="" class="color">For employes</a></li>
+                    <div id="DayNightMode">
+                        <img src="moon.png" alt="" id="icon">
+                    </div>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+    
+    <section id="sec1"> 
+
+    </section>
+    <hr>
+    <section style="height: 100vh; background-color: greenyellow;"></section>
+    <hr>
+
+<script>
+    var icon = document.getElementById("icon");
+    icon.onclick = function(){
+        document.body.classList.toggle("dark-theme");
+        if(document.body.classList.contains("dark-theme")){
+            icon.src = "sun.png"
+        }
+        else{
+             icon.src = "moon.png"
+        }
+    }
+</script>    
+</body>
+
+</html>
